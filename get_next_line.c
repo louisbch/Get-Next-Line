@@ -73,7 +73,7 @@ char	*ft_next(char *stash)
 	i = 0;
 	while (stash[i] && stash[i] != '\n')
 		i++;
-	if (!stash[i] || (stash[i] && !stash[i + 1]))
+	if (!stash[i] || (stash[i] || !stash[i + 1]))
 	{
 		free(stash);
 		return (NULL);
